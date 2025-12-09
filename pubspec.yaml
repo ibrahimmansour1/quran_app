@@ -35,11 +35,10 @@ dependencies:
     path: ./quran-1.2.2  
   string_validator: 
   easy_container: 
-  wakelock: 
-  # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_screenutil:
+  wakelock_plus: ^1.4.0
   
 dev_dependencies:
   flutter_test:
@@ -67,6 +66,7 @@ flutter:
   assets:
     - assets/json/surahs.json
     - assets/images/
+    - assets/json/extracted_ayat.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
