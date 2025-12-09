@@ -177,11 +177,11 @@ class _TafsirPageViewState extends State<TafsirPageView> {
             // Header with verse number
             Container(
               padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 16.w),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    const Color(0xFFD4A574),
-                    const Color(0xFFB8935E),
+                    Color(0xFFD4A574),
+                    Color(0xFFB8935E),
                   ],
                 ),
               ),
@@ -355,11 +355,12 @@ class _TafsirPageViewState extends State<TafsirPageView> {
                   textAlign: TextAlign.center,
                   textDirection: TextDirection.rtl,
                   style: TextStyle(
-                    fontFamily: 'Taha',
-                    fontSize: 22.sp,
-                    height: 1.8,
+                    fontFamily:
+                        'QCF_P${currentPage.toString().padLeft(3, "0")}',
+                    fontSize: 26.sp,
+                    height: 2.0,
                     color: const Color(0xFF1A1A1A),
-                    letterSpacing: 0.5,
+                    letterSpacing: 0.2,
                   ),
                 ),
               ),
@@ -387,10 +388,11 @@ class _TafsirPageViewState extends State<TafsirPageView> {
                           textAlign: TextAlign.right,
                           textDirection: TextDirection.rtl,
                           style: TextStyle(
-                            fontFamily: 'arial',
-                            fontSize: 14.sp,
+                            fontFamily:
+                                'QCF_P${currentPage.toString().padLeft(3, "0")}',
+                            fontSize: 16.sp,
                             color: const Color(0xFF2E7D32),
-                            height: 1.6,
+                            height: 1.8,
                           ),
                         ),
                       ),
