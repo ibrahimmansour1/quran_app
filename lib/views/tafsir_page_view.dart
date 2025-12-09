@@ -388,8 +388,8 @@ class _TafsirPageViewState extends State<TafsirPageView> {
                           textAlign: TextAlign.right,
                           textDirection: TextDirection.rtl,
                           style: TextStyle(
-                            fontFamily:
-                                'QCF_P${currentPage.toString().padLeft(3, "0")}',
+                            // fontFamily:
+                            //     'QCF_P${currentPage.toString().padLeft(3, "0")}',
                             fontSize: 16.sp,
                             color: const Color(0xFF2E7D32),
                             height: 1.8,
