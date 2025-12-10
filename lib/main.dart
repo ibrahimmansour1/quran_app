@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(392.72727272727275, 800.7272727272727),
       builder: (context, child) => const MaterialApp(
         title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
         home: MyHomePage(),
       ),
     );

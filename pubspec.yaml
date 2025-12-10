@@ -81,6 +81,12 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: maali
+      fonts:
+        - asset: assets/fonts/MCS-ALMAALIM.ttf
+    - family: mylotus
+      fonts:
+        - asset: assets/fonts/LotusLinotype-Light.otf
     - family: arsura
       fonts:
         - asset: assets\fonts\arsura.ttf

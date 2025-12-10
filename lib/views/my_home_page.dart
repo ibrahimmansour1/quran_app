@@ -35,13 +35,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              const Color(0xFFFFFBF0),
-              const Color(0xFFF5E6D3),
+              Color(0xFFFFFBF0),
+              Color(0xFFF5E6D3),
             ],
           ),
         ),
@@ -103,10 +103,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   title: 'قراءة المصحف',
                   subtitle: 'القرآن الكريم بالرسم العثماني',
                   icon: Icons.menu_book_rounded,
-                  gradient: LinearGradient(
+                  gradient: const LinearGradient(
                     colors: [
-                      const Color(0xFFD4A574),
-                      const Color(0xFFB8935E),
+                      Color(0xFFD4A574),
+                      Color(0xFFB8935E),
                     ],
                   ),
                   onTap: () {
@@ -128,10 +128,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   title: 'التفسير الميسر',
                   subtitle: 'تفسير الآيات مع معاني الكلمات',
                   icon: Icons.school_rounded,
-                  gradient: LinearGradient(
+                  gradient: const LinearGradient(
                     colors: [
-                      const Color(0xFF81C784),
-                      const Color(0xFF66BB6A),
+                      Color(0xFF81C784),
+                      Color(0xFF66BB6A),
                     ],
                   ),
                   onTap: () {
