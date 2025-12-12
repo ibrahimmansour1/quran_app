@@ -165,7 +165,8 @@ class _TafsirPageViewState extends State<TafsirPageView> {
           if (tafsir.isNotEmpty) ...[
             SizedBox(height: 16.h),
             Text(
-              'التفسير:',
+              "التفسير",
+              textAlign: TextAlign.right,
               style: TextStyle(
                 fontFamily: 'Taha',
                 fontSize: 16.sp,
@@ -174,17 +175,7 @@ class _TafsirPageViewState extends State<TafsirPageView> {
               ),
             ),
             SizedBox(height: 8.h),
-            Text(
-              tafsir,
-              textAlign: TextAlign.right,
-              textDirection: TextDirection.rtl,
-              style: TextStyle(
-                fontFamily: tafsir.contains('♠') ? 'maali' : 'amiri',
-                fontSize: 14.sp,
-                height: 1.8,
-                color: const Color(0xFF2C1810),
-              ),
-            ),
+            _buildTafsirText(tafsir),
           ],
 
           // Simple divider
@@ -194,6 +185,79 @@ class _TafsirPageViewState extends State<TafsirPageView> {
             thickness: 1,
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildTafsirText(String tafsir) {
+    List<TextSpan> textSpans = [];
+
+    List<String> parts = tafsir.split('#');
+    String baseFontFamily = tafsir.contains('♠') ? 'maali' : 'amiri';
+    String mushafFont = 'QCF_P${(currentPage + 1).toString().padLeft(3, "0")}';
+
+    for (int i = 0; i < parts.length; i++) {
+      if (parts[i].isEmpty) continue;
+
+      bool isSpecialSection = i % 2 == 1;
+
+      if (isSpecialSection) {
+        textSpans.add(
+          TextSpan(
+            text: '(',
+            style: TextStyle(
+              fontFamily: baseFontFamily,
+              fontSize: 14.sp,
+              height: 1.8,
+              color: const Color(0xFF2C1810),
+            ),
+          ),
+        );
+
+        // Add Quranic text with Mushaf font
+        textSpans.add(
+          TextSpan(
+            text: parts[i],
+            style: TextStyle(
+              fontFamily: mushafFont,
+              fontSize: 20.sp,
+              height: 1.8,
+              color: const Color(0xFF2C1810),
+            ),
+          ),
+        );
+
+        textSpans.add(
+          TextSpan(
+            text: ')',
+            style: TextStyle(
+              fontFamily: baseFontFamily,
+              fontSize: 14.sp,
+              height: 1.8,
+              color: const Color(0xFF2C1810),
+            ),
+          ),
+        );
+      } else {
+        textSpans.add(
+          TextSpan(
+            text: parts[i],
+            style: TextStyle(
+              fontFamily: baseFontFamily,
+              fontSize: 14.sp,
+              height: 1.8,
+              color: const Color(0xFF2C1810),
+            ),
+          ),
+        );
+      }
+    }
+
+    return RichText(
+      textAlign: TextAlign.justify,
+      textDirection: TextDirection.rtl,
+      text: TextSpan(
+        children: textSpans,
       ),
     );
   }

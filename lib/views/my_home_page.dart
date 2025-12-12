@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:quran_tutorial/views/quran_sura_page.dart';
 import 'package:quran_tutorial/views/tafsir_page_view.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -94,34 +93,31 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                 ),
+                const Spacer(),
 
-                SizedBox(height: 50.h),
-
-                // Navigation Cards
-                _buildNavigationCard(
-                  context,
-                  title: 'قراءة المصحف',
-                  subtitle: 'القرآن الكريم بالرسم العثماني',
-                  icon: Icons.menu_book_rounded,
-                  gradient: const LinearGradient(
-                    colors: [
-                      Color(0xFFD4A574),
-                      Color(0xFFB8935E),
-                    ],
-                  ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (builder) => QuranPage(
-                          suraJsonData: widgejsonData,
-                        ),
-                      ),
-                    );
-                  },
-                ),
-
-                SizedBox(height: 20.h),
+                // // Navigation Cards
+                // _buildNavigationCard(
+                //   context,
+                //   title: 'قراءة المصحف',
+                //   subtitle: 'القرآن الكريم بالرسم العثماني',
+                //   icon: Icons.menu_book_rounded,
+                //   gradient: const LinearGradient(
+                //     colors: [
+                //       Color(0xFFD4A574),
+                //       Color(0xFFB8935E),
+                //     ],
+                //   ),
+                //   onTap: () {
+                //     Navigator.push(
+                //       context,
+                //       MaterialPageRoute(
+                //         builder: (builder) => QuranPage(
+                //           suraJsonData: widgejsonData,
+                //         ),
+                //       ),
+                //     );
+                //   },
+                // ),
 
                 _buildNavigationCard(
                   context,
@@ -146,7 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                 ),
 
-                SizedBox(height: 40.h),
+                const Spacer(),
 
                 // Footer text
                 Text(

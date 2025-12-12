@@ -22,3 +22,10 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// 1- separate design in UI (background)
+// 2- put (lotus) font in all program
+// 3- make meaning in dark red and increase font by 2 degrees u'll find it in word office
+// 4- التفسير = اللطائف
+// 5- make quranic text in tafsir in purple (like word file if it's not colored don't color it)
+// 6- save last page on read sth like (anchor)
